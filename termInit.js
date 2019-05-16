@@ -8,12 +8,13 @@ bot.login(BOTCONF.token).then(() => {
     console.log("I am ready");
     // Get Guild ID's
     var ROBPlayground = bot.guilds.get(CONSTS.robPlayground['guildId']);
-    console.log(ROBPlayground);
-
+    console.log(CONSTS.TEKy['channels']['botTest'])
     var TEKy = bot.guild.get(CONSTS.tekies['guildId']);
-    console.log(TEKy)
-
-
+    // if (TEKy && TEKy.channels.get(CONSTS.TEKy['channels']['botTest'])) {
+    //     TEKy.channels.get(CONSTS.TEKy['channels']['botTest']).send("Terminator Test").then(() => client.destroy());
+    // } else {
+    //     console.log("Failed");
+    // }
 
     // if (guild && guild.channels.get(channelId)) {
     //     guild.channels.get(channelId).send("Terminator Initialized").then(() => client.destroy());
