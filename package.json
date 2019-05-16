@@ -1,0 +1,14 @@
+{
+  "name": "termbot",
+  "version": "1.2.0",
+  "description": "Terminator bot for cron controlled deletion",
+  "main": "termInit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ctrl_Null",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.0"
+  }
+}
