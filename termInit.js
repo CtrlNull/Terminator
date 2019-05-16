@@ -2,26 +2,24 @@ const BOTCONF = require("./botconfig.json");
 const CONSTS = require("./consts.json");
 const Discord = require("discord.js");
 
-const bot = new Discord.Client({disableEveryone: true});
+const bot = new Discord.Client();
 
 bot.login(BOTCONF.token).then(() => {
     console.log("I am ready");
     // Get Guild ID's
     var ROBPlayground = bot.guilds.get(CONSTS.robPlayground['guildId']);
-    console.log(CONSTS.TEKy['channels']['botTest'])
-    var TEKy = bot.guild.get(CONSTS.tekies['guildId']);
-    // if (TEKy && TEKy.channels.get(CONSTS.TEKy['channels']['botTest'])) {
-    //     TEKy.channels.get(CONSTS.TEKy['channels']['botTest']).send("Terminator Test").then(() => client.destroy());
-    // } else {
-    //     console.log("Failed");
-    // }
-
-    // if (guild && guild.channels.get(channelId)) {
-    //     guild.channels.get(channelId).send("Terminator Initialized").then(() => client.destroy());
-    // } else {
-    //     console.log("nope");
-    //     //if the bot doesn't have guild with the id guildid
-    //     // or if the guild doesn't have the channel with id channelid
-    // }
-    client.destroy();
+    
+    if (ROBPlayground && ROBPlayground.channels.get(CONSTS.robPlayground['channels'][0]['muzak'])) {
+        ROBPlayground.channels.get(CONSTS.robPlayground['channels'][0]['muzak']).send("Terminator Initialized").then(() => console.log("RobPlayground Init"));
+    }else {
+        console.log("ROBs Failed")
+    }
+    
+    var TEKy = bot.guilds.get(CONSTS.tekies['guildId']);
+    if (TEKy && TEKy.channels.get(CONSTS.tekies['channels'][0]['pr001'])) {
+        TEKy.channels.get(CONSTS.tekies['channels'][0]['pr001']).send("Terminator Initialized").then(() => console.log('Tekies initSent'));
+    } else {
+        console.log("Failed");
+    }
+    bot.destroy();
 });
