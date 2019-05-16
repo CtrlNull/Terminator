@@ -1,16 +1,19 @@
 const BOTCONF = require("./botconfig.json");
 const CONSTS = require("./consts.json");
 const Discord = require("discord.js");
+
 const bot = new Discord.Client({disableEveryone: true});
-console.log(BOTCONF.token)
+
 bot.login(BOTCONF.token).then(() => {
     console.log("I am ready");
     // Get Guild ID's
-    var ROBPlayground = client.guilds.get(CONSTS.robPlayground['guildId']);
+    var ROBPlayground = bot.guilds.get(CONSTS.robPlayground['guildId']);
     console.log(ROBPlayground);
 
-    var TEKy = client.guild.get(CONSTS.tekies['guildId']);
+    var TEKy = bot.guild.get(CONSTS.tekies['guildId']);
     console.log(TEKy)
+
+
 
     // if (guild && guild.channels.get(channelId)) {
     //     guild.channels.get(channelId).send("Terminator Initialized").then(() => client.destroy());
