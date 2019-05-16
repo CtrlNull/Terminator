@@ -2,7 +2,7 @@ const BOTCONF = require("./botconfig.json");
 const CONSTS = require("./consts.json");
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
-
+console.log(BOTCONF.token)
 bot.login(BOTCONF.token).then(() => {
     console.log("I am ready");
     // Get Guild ID's
