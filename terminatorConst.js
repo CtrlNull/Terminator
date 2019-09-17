@@ -7,7 +7,7 @@ const KEEP_ALIVE = require('./keep_alive.js')
 const bot = new Discord.Client();
 const prefix = '*'; // This is the prefix, you can change it to whatever you want.
 const roleArr = ['AdminZ', 'Terminator']
-const channels = [CONSTS.robPlayground['channels'][0]['muzak'], CONSTS.tekies['channels'][0]['pr001']]
+const channels = [CONSTS.robPlayground['channels'][0]['muzak'], CONSTS.tekies['channels'][0]['pr001'], NO]
 
 bot.on('message', message => {
     // Variables - Variables make it easy to call things, since it requires less typing.
