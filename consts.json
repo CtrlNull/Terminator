@@ -12,5 +12,11 @@
         "channels": [
             { "muzak": "578322038763290636"}
         ]
+    },
+    "TheCarolinas" : {
+        "guildId": "",
+        "channels": [
+            {"private001": "621422831967666187"}
+        ]
     }
 }
