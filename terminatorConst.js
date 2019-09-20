@@ -7,7 +7,7 @@ const KEEP_ALIVE = require('./keep_alive.js')
 const bot = new Discord.Client();
 const prefix = '*'; // This is the prefix, you can change it to whatever you want.
 const roleArr = ['AdminZ', 'Terminator']
-const channels = [CONSTS.robPlayground['channels'][0]['muzak'], CONSTS.tekies['channels'][0]['pr001'], NO]
+const channels = [CONSTS.theCarolinas['channels'][0]['private001'], CONSTS.robPlayground['channels'][0]['muzak'], CONSTS.tekies['channels'][0]['pr001']]
 
 bot.on('message', message => {
     // Variables - Variables make it easy to call things, since it requires less typing.
@@ -72,6 +72,10 @@ bot.on('message', message => {
         // We have to wrap this in an async since awaits only work in them.
         async function purge() {
             message.delete(); // Let's delete the command message, so it doesn't interfere with the messages we are going to delete.
+
+            if (message.channelid == CONSTS.theCarolinas['channels'][0]['muzak']) {
+                
+            }
 
             if (message.channel.id == CONSTS.robPlayground['channels'][0]['muzak']) {
                 // Now, we want to check if the user has the `bot-commander` role, you can change this to whatever you want.
