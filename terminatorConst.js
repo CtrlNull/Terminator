@@ -73,8 +73,10 @@ bot.on('message', message => {
         async function purge() {
             message.delete(); // Let's delete the command message, so it doesn't interfere with the messages we are going to delete.
 
-            if (message.channelid == CONSTS.theCarolinas['channels'][0]['muzak']) {
-                
+            if (message.channelid == CONSTS.theCarolinas['channels'][0]['private001']) {
+                if (!message.member.roles.find("name", "Terminator")) {
+                    message.channel.send('You need the \`Terminator\` role to use this command.');
+                }
             }
 
             if (message.channel.id == CONSTS.robPlayground['channels'][0]['muzak']) {
