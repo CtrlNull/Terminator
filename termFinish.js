@@ -28,7 +28,7 @@ bot.login(BOTCONF.token).then(() => {
     // The Carolina's Server 
     var carolinaServ = bot.guilds.get(CONSTS.theCarolinas['guildId']);
     if (carolinaServ && carolinaServ.channels.get(CONST.theCarolinas['channels'][0]['private001'])) {
-        carolinaServ.channels.get(CONSTS.tekies['channels'][0]['pr001']).send("Purge Complete").then(() => console.log('The Carolinas warnning sent'));
+        carolinaServ.channels.get(CONSTS.theCarolinas['channels'][0]['private001']).send("Purge Complete").then(() => console.log('The Carolinas warnning sent'));
     } else {
         console.log("Failed");
     }
