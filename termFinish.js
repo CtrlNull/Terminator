@@ -17,13 +17,13 @@ bot.login(BOTCONF.token).then(() => {
         console.log("ROBs Failed")
     }
     
-    // Tekies Server
-    var TEKy = bot.guilds.get(CONSTS.tekies['guildId']);
-    if (TEKy && TEKy.channels.get(CONSTS.tekies['channels'][0]['pr001'])) {
-        TEKy.channels.get(CONSTS.tekies['channels'][0]['pr001']).send("Purge Complete").then(() => console.log('Tekies initSent'));
-    } else {
-        console.log("Failed");
-    }
+    // // Tekies Server
+    // var TEKy = bot.guilds.get(CONSTS.tekies['guildId']);
+    // if (TEKy && TEKy.channels.get(CONSTS.tekies['channels'][0]['pr001'])) {
+    //     TEKy.channels.get(CONSTS.tekies['channels'][0]['pr001']).send("Purge Complete").then(() => console.log('Tekies initSent'));
+    // } else {
+    //     console.log("Failed");
+    // }
 
     // The Carolina's Server 
     var carolinaServ = bot.guilds.get(CONSTS.theCarolinas['guildId']);
