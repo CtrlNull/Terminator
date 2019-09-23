@@ -29,7 +29,7 @@ bot.login(BOTCONF.token).then(() => {
 
     // The Carolina's Server 
     var carolinaServ = bot.guilds.get(CONSTS.theCarolinas['guildId']);
-    if (carolinaServ && carolinaServ.channels.get(CONST.theCarolinas['channels'][0]['private001'])) {
+    if (carolinaServ && carolinaServ.channels.get(CONSTS.theCarolinas['channels'][0]['private001'])) {
         carolinaServ.channels.get(CONSTS.theCarolinas['channels'][0]['private001']).send("*terminate").then(() => console.log('The Carolinas warnning sent'));
         carolinaServ.channels.get(CONSTS.theCarolinas['channels'][0]['private001']).send("All items terminated").then(() => console.log('The Carolinas warnning sent'));
     } else {
